@@ -1,4 +1,9 @@
 <?= $this->extend('layout/template'); ?>
+<!-- ni adalah pernyataan yang digunakan untuk menghubungkan
+atau "meng-extend" tampilan dengan tampilan layout/template. 
+Tampilan layout biasanya berisi elemen-elemen tampilan yang 
+akan ada di setiap halaman, seperti header, footer, dan navigasi. 
+Dengan meng-extend layout, Anda dapat memasukkan konten halaman yang berbeda ke dalam tampilan layout yang sama. -->
 <?= $this->section('content'); ?>
 
 <!-- Page Heading -->
