@@ -6,15 +6,19 @@ use CodeIgniter\Model;
 
 class ProfileModel extends Model
 {
+    // Mendefinisikan tabel yang akan digunakan oleh model.
+    protected $table = 'profile';
 
-    protected $table            = 'profile';
-    protected $allowedFields    = ['nama', 'alamat', 'email', 'telp', 'gambar'];
+    // Mendefinisikan kolom-kolom yang diperbolehkan untuk diisi.
+    protected $allowedFields = ['nama', 'alamat', 'email', 'telp', 'gambar'];
 
-
+    // Metode untuk mengambil semua data profil dari tabel 'profile'.
     public function getAllProfile()
     {
         return $this->db->table('profile')->get()->getResultArray();
     }
+
+    // Metode untuk mengambil data profil berdasarkan ID.
     public function getProfileById($id = false)
     {
         if ($id == false) {
