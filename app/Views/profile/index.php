@@ -61,6 +61,11 @@
                                     <button type="submit" class="badge badge-danger btn-sm" onclick="return confirm('Apa Anda Yakin hapus data?.');">Delete</button>
                                 </form>
                             </td>
+                            <!-- Bagian ini adalah tabel yang menampilkan data profile. 
+                            Setiap baris dalam tabel berisi informasi tentang satu profil, 
+                            termasuk gambar, nama, alamat, email, nomor telepon, dan tindakan 
+                            (Edit dan Delete). Data diambil dari array $profile yang diterima 
+                            dari controller -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
