@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2022 at 03:37 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Generation Time: Oct 13, 2023 at 01:02 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,14 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `migrations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` bigint UNSIGNED NOT NULL,
   `version` varchar(255) NOT NULL,
   `class` varchar(255) NOT NULL,
   `group` varchar(255) NOT NULL,
   `namespace` varchar(255) NOT NULL,
-  `time` int(11) NOT NULL,
-  `batch` int(11) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `time` int NOT NULL,
+  `batch` int UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `migrations`
@@ -51,21 +51,21 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 --
 
 CREATE TABLE `profile` (
-  `id` int(11) UNSIGNED NOT NULL,
+  `id` int UNSIGNED NOT NULL,
   `nama` varchar(250) NOT NULL,
   `alamat` varchar(512) NOT NULL,
   `email` varchar(256) NOT NULL,
   `telp` varchar(256) NOT NULL,
   `gambar` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `profile`
 --
 
 INSERT INTO `profile` (`id`, `nama`, `alamat`, `email`, `telp`, `gambar`) VALUES
-(1, 'Affanul Hakim', 'Jakarta, Indonesia', 'testing@gmail.com', '085512319', '1654582833_c0ffeacc67e3e098e870.jpg'),
-(5, 'Goins Manoppo SAg', 'Girian Bawah Kota Bitung Id', 'testing@gmail.com', '085312312399', '1654530637_2891e6399a0cfc3e4680.jpg');
+(1, 'Epantika Pratama', 'Riau', '123@gmail.com', '120093028', '1654582833_c0ffeacc67e3e098e870.jpg'),
+(5, 'FULAN', 'Riau', 'test@gmail.com', '988184', '1697192321_057fefdf092dc8c4bd68.png');
 
 --
 -- Indexes for dumped tables
@@ -91,13 +91,13 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
